@@ -4,13 +4,17 @@ const favoritesSlice = createSlice({
   name: "favorites",
   initialState: {
     ids: [],
-    reducers: {
-      addFavorite: (state, action) => {
-        state.ids.push(action.payload);
-      },
-      removeFavorite: (state) => {
-        state.ids.splice(state.ids.indexOf(action.payload), 1);
-      },
+  },
+  reducers: {
+    addFavorite: (state, action) => {
+      console.log("aaa", action);
+      state.ids.push(action.payload.id);
+    },
+    removeFavorite: (state, action) => {
+      const index = state.ids.indexOf(action.payload.id);
+      if (index !== -1) {
+        state.ids.splice(index, 1);
+      }
     },
   },
 });
