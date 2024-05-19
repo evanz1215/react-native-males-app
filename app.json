@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "react-native-males-app",
+    "name": "My Recipe Book",
     "slug": "react-native-males-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,18 +12,29 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "buildNumber": "1.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.evanz1215.myrecipebook"
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.evanz1215.myrecipebook"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47dd3e74-c2f9-45b8-91cd-00b6d27b25e5"
+      }
     }
   }
 }
